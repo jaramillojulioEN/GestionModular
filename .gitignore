@@ -1,0 +1,67 @@
+# Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Archivos de Rider (JetBrains)
+.idea/
+*.sln.iml
+
+# Archivos de sistema
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_Store
+
+# Archivos de compilación
+bin/
+obj/
+[Bb]uild/
+out/
+Generated_Code/
+
+# Archivos de paquetes NuGet y herramientas
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.psess
+*.vsp
+*.vspx
+*.vspscc
+*.vssscc
+
+# Archivos temporales de ejecución
+*.log
+*.tlog
+*.cache
+*.tmp
+*.bak
+
+# Archivos de configuración de usuario
+*.launchSettings.json
+
+# Archivos de test y cobertura
+TestResults/
+*.coverage
+*.coveragexml
+*.codecoverage
+
+# Archivos secretos (ajusta según tu configuración)
+secrets.json
+
+# Archivos de configuración local de docker (si usas)
+.docker/
+
+# Archivos de configuración global de git
+.gitconfig
+
+# Archivos de entorno local
+.env
+.env.*
+
+# Otros
+*.db
+*.sqlite
+*.mdf
+*.ldf
