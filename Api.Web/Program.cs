@@ -1,6 +1,7 @@
 using Api.Application.Interfaces;
 using Api.Application.Services;
 using Api.Domain.Entities;
+using Api.Infrastructure;
 using Api.Infrastructure.Persistence;
 using Api.Web.MappingProfiles;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -39,7 +40,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 //dependencias
-builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddInfrastructure(builder.Configuration);
 
 
 builder.Services.AddControllers();
