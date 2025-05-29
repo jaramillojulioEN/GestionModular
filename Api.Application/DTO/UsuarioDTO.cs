@@ -14,5 +14,6 @@ namespace Api.Application.DTO
         public string NombreUsuario { get; set; } = null!;
         public string Correo { get; set; } = null!;
         public bool Activo { get; set; }
+        public string IdAspnetUser { get; set; }
     }
 }
