@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Api.Application.DTO
+namespace Api.Application.DTO.Usuario
 {
     public class LoginDTO
     {
-        public string usuario {  get; set; }
-        public string clave {  get; set; }
+        public string Email {  get; set; }
+        public string Password {  get; set; }
     }
 }

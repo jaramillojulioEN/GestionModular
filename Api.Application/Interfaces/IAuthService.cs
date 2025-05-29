@@ -1,5 +1,5 @@
-﻿using Api.Application.DTO;
-using Api.Application.DTO.Responses;
+﻿using Api.Application.DTO.Responses;
+using Api.Application.DTO.Usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,8 @@ namespace Api.Application.Interfaces
 {
     public interface IAuthService
     {
-        Task<RespuestaBaseDTO> RegisterAuthUserAsync(UsuarioDTO usuarioDTO);
+        Task<RespuestaBaseDTO> RegisterAuthUserAsync(UsuarioNuevoDTO usuarioDTO);
+        Task<AuthResponseDTO> LoginAsync(LoginDTO credentials);
+
     }
 }

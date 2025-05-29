@@ -1,8 +1,10 @@
-﻿using Api.Application.DTO;
-using Api.Application.DTO.Responses;
+﻿using Api.Application.DTO.Responses;
+using Api.Application.DTO.Usuario;
 using Api.Application.UseCases;
 using Api.Domain.Entities;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Web.Controllers
@@ -19,10 +21,20 @@ namespace Api.Web.Controllers
         }
 
         [Route("Nuevo")]
-        [HttpGet]
-        public async Task<RespuestaBaseDTO> AgregarUsuario(UsuarioDTO usuario)
+        [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        public async Task<RespuestaBaseDTO> AgregarUsuario(UsuarioNuevoDTO usuario)
         {
-           return await _UCUsers.AddNewUser(usuario);
+            var user = HttpContext.User;
+            var claims = user.Claims.ToList();
+            return await _UCUsers.AddNewUser(usuario);
+        }
+
+        [Route("Login")]
+        [HttpPost]
+        public async Task<RespuestaBaseDTO> Login(LoginDTO credentials)
+        {
+            return await _UCUsers.Login(credentials);
         }
     }
 }

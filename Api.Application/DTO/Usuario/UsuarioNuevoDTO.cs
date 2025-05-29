@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Api.Application.DTO
+namespace Api.Application.DTO.Usuario
 {
-    public class UsuarioDTO
+    public class UsuarioNuevoDTO
     {
         public int Id { get; set; }
         public string NombreCompleto { get; set; } = null!;
@@ -14,6 +14,6 @@ namespace Api.Application.DTO
         public string NombreUsuario { get; set; } = null!;
         public string Correo { get; set; } = null!;
         public bool Activo { get; set; }
-        public string IdAspnetUser { get; set; }
+        public string? IdAspnetUser { get; set; }
     }
 }

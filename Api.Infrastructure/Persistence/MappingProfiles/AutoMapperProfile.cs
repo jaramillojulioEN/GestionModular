@@ -1,4 +1,5 @@
 ﻿using Api.Application.DTO;
+using Api.Application.DTO.Usuario;
 using Api.Domain.Entities;
 using AutoMapper;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -20,6 +21,9 @@ namespace Api.Web.MappingProfiles
 
             CreateMap<Usuario, UsuarioDTO>();
             CreateMap<UsuarioDTO, Usuario>();
+
+            CreateMap<Usuario, UsuarioNuevoDTO>();
+            CreateMap<UsuarioNuevoDTO, Usuario>();
         }
     }
 }
