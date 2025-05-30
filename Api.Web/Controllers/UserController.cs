@@ -32,7 +32,7 @@ namespace Api.Web.Controllers
 
         [Route("Login")]
         [HttpPost]
-        public async Task<RespuestaBaseDTO> Login(LoginDTO credentials)
+        public async Task<AuthResponseDTO> Login(LoginDTO credentials)
         {
             return await _UCUsers.Login(credentials);
         }

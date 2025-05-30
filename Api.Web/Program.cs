@@ -1,4 +1,4 @@
-using Api.Application.Interfaces;
+﻿using Api.Application.Interfaces;
 using Api.Application.Services;
 using Api.Domain.Entities;
 using Api.Infrastructure;
@@ -109,7 +109,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseRouting();
+app.UseCors();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
